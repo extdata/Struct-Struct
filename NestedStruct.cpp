@@ -14,6 +14,8 @@ struct company
 	char companyname[50];
 };
 
+void printinformation( const company & );
+
 int main()
 {
 	company c1;
@@ -28,11 +30,16 @@ int main()
 	cout << "\nDigite o nome da empresa onde trabalha: ";
 	cin >> c1.companyname;
 	
+	printinformation( c1 );
+	
+	return 0;
+}
+
+void printinformation( const company & c1 )
+{
 	cout << "\nExibidos suas informa" << char(135) << char(228) << "es!";
 	cout << "\nNome da empresa: " << c1.companyname;
 	cout << "\nNome: " << c1.id.name;
 	cout << "\nIdade: " << c1.id.age;
 	cout << "\nSal" << char(160) << "rio: " << c1.id.salary;
-	
-	return 0;
 }
